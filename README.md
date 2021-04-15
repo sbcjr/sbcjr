@@ -1,16 +1,19 @@
-### Hi there 👋
+### Hey, how are ya? :wave:
 
-<!--
-**sbcjr/sbcjr** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Hang in there, take care....
 
-Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- [x] work hard :nerd_face:
+- [x] help people :people_holding_hands:
+- [x] make money :moneybag:
+- [ ] take a breath :stop_sign:
+- [ ] matter :no_mouth:
+
+
+```php
+$last_words = 'nothing left to give';
+die($last_words);
+```
+
+
+![](https://github.com/sbcjr/github-stats/blob/master/generated/overview.svg)
