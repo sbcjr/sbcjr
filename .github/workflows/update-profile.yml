@@ -42,6 +42,15 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: refresh profile data [skip ci]"
-            git pull --rebase origin "${GITHUB_REF_NAME}"
-            git push
+            for attempt in 1 2 3; do
+              git pull --rebase origin "${GITHUB_REF_NAME}" || { echo "Rebase failed due to conflicts."; exit 1; }
+              if git push; then
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "Push failed after 3 attempts."
+                exit 1
+              fi
+              echo "Push rejected, retrying..."
+            done
           fi
