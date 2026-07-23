@@ -42,9 +42,8 @@ jobs:
             echo "No changes to commit."
           else
             max_attempts=3
-            attempt=1
             git commit -m "chore: refresh profile data [skip ci]"
-            while [ "$attempt" -le "$max_attempts" ]; do
+            for attempt in $(seq 1 "$max_attempts"); do
               git pull --rebase origin "${GITHUB_REF_NAME}" || { echo "Rebase failed due to conflicts."; exit 1; }
               if git push; then
                 break
@@ -54,6 +53,5 @@ jobs:
                 exit 1
               fi
               echo "Push rejected, retrying..."
-              attempt=$((attempt + 1))
             done
           fi
