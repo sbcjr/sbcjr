@@ -50,17 +50,17 @@
 ---
 
 <samp>
-'''''''''''''''''''''<br>
-'''''''```````'''''''&nbsp;&nbsp;&nbsp;&nbsp;<strong>What I do</strong><br>
-'''''```````````'''''<br>
-'''```````````````'''&nbsp;&nbsp;&nbsp;&nbsp;&bull; Custom WordPress themes (from scratch)<br>
-''`````````````````''&nbsp;&nbsp;&nbsp;&nbsp;&bull; Mass use WP themes (in the Directory)<br>
-''`````````````````''&nbsp;&nbsp;&nbsp;&nbsp;&bull; Automations (delegating- not spammy stuff)<br>
-''`````````````````''&nbsp;&nbsp;&nbsp;&nbsp;&bull; <a href="#x" title="&#129370;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><br>
-''`````````````````''&nbsp;&nbsp;&nbsp;&nbsp;&bull; Debugging, troubleshooting, genuinely caring customer support<br>
-'''```````````````'''&nbsp;&nbsp;&nbsp;&nbsp;&bull; Genuinely caring about everybody else (including you!) too....<br>
-''''''`````````''''''<br>
-'''''''''''''''''''''
+'''''''''''''''''''''''<br>
+''''''''```````''''''''&nbsp;&nbsp;&nbsp;&nbsp;<strong>What I do</strong><br>
+''''''```````````''''''<br>
+''''```````````````''''&nbsp;&nbsp;&nbsp;&nbsp;&bull; Custom WordPress themes (from scratch)<br>
+'''`````````````````'''&nbsp;&nbsp;&nbsp;&nbsp;&bull; Mass use WP themes (in the Directory)<br>
+'''`````````````````'''&nbsp;&nbsp;&nbsp;&nbsp;&bull; Automations (delegating- not spammy stuff)<br>
+'''`````````````````'''&nbsp;&nbsp;&nbsp;&nbsp;&bull; <a href="#x" title="&#129370;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a><br>
+'''`````````````````'''&nbsp;&nbsp;&nbsp;&nbsp;&bull; Debugging, troubleshooting, genuinely caring customer support<br>
+''''```````````````''''&nbsp;&nbsp;&nbsp;&nbsp;&bull; Genuinely caring about everybody else (including you!) too....<br>
+'''''''`````````'''''''<br>
+'''''''''''''''''''''''
 </samp>
 
 <details>
