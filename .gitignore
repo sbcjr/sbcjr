@@ -1,0 +1,13 @@
+# Private context / tooling - never publish to the public profile repo
+CLAUDE.md
+.claude/
+.mcp.json
+.mcp.json.example
+
+# Python
+__pycache__/
+*.pyc
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
