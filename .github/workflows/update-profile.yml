@@ -41,16 +41,19 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
+            max_attempts=3
+            attempt=1
             git commit -m "chore: refresh profile data [skip ci]"
-            for attempt in 1 2 3; do
+            while [ "$attempt" -le "$max_attempts" ]; do
               git pull --rebase origin "${GITHUB_REF_NAME}" || { echo "Rebase failed due to conflicts."; exit 1; }
               if git push; then
                 break
               fi
-              if [ "$attempt" -eq 3 ]; then
-                echo "Push failed after 3 attempts."
+              if [ "$attempt" -eq "$max_attempts" ]; then
+                echo "Push failed after ${max_attempts} attempts."
                 exit 1
               fi
               echo "Push rejected, retrying..."
+              attempt=$((attempt + 1))
             done
           fi
