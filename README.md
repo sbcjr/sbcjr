@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `1`
+**⏱️ Days since my last public contribution:** `2`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** Git was written by Linus Torvalds in ~2 weeks in 2005 after a BitKeeper falling-out.
+**🧠 Fact of the day:** The QWERTY layout was designed in the 1870s to slow typists and prevent jams.
 
 <!-- PROFILE:END -->
 

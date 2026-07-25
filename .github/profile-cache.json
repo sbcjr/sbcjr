@@ -6,28 +6,28 @@
       "result": "🔴 L 28-30",
       "stakes": "Music City Bowl",
       "record": "8-5",
-      "fetched": "2026-07-24"
+      "fetched": "2026-07-25"
     },
     "mbb": {
       "matchup": "UT @ Michigan",
       "result": "🔴 L 62-95",
       "stakes": "Elite 8",
       "record": "25-12",
-      "fetched": "2026-07-24"
+      "fetched": "2026-07-25"
     },
     "wbb": {
       "matchup": "UT @ NC State",
       "result": "🔴 L 61-76",
       "stakes": "1st Round",
       "record": "16-14",
-      "fetched": "2026-07-24"
+      "fetched": "2026-07-25"
     },
     "baseball": {
       "matchup": "UT @ VCU",
       "result": "🔴 L 4-5",
       "stakes": "Elimination Game",
       "record": "38-22",
-      "fetched": "2026-07-24"
+      "fetched": "2026-07-25"
     },
     "softball": {
       "matchup": "UT @ Texas",
@@ -37,7 +37,7 @@
       "stakes_override": "WCWS National Semifinal",
       "stakes_override_game": "6599924",
       "record": "49-12",
-      "fetched": "2026-07-24"
+      "fetched": "2026-07-25"
     }
   },
   "ranks": {
