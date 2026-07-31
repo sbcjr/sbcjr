@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `7`
+**⏱️ Days since my last public contribution:** `8`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** 'Foobar' likely derives from the WWII-era military slang 'FUBAR'.
+**🧠 Fact of the day:** The first version of Unix (1969) fit on a machine with 24 KB of memory.
 
 <!-- PROFILE:END -->
 
