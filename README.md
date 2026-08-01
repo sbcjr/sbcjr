@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `8`
+**⏱️ Days since my last public contribution:** `9`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The first version of Unix (1969) fit on a machine with 24 KB of memory.
+**🧠 Fact of the day:** SQL was originally called SEQUEL, but the name was already trademarked.
 
 <!-- PROFILE:END -->
 
