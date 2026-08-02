@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `9`
+**⏱️ Days since my last public contribution:** `10`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** SQL was originally called SEQUEL, but the name was already trademarked.
+**🧠 Fact of the day:** Ada Lovelace wrote the first algorithm intended for a machine in the 1840s.
 
 <!-- PROFILE:END -->
 
