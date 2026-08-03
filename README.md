@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `10`
+**⏱️ Days since my last public contribution:** `11`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** Ada Lovelace wrote the first algorithm intended for a machine in the 1840s.
+**🧠 Fact of the day:** The 'save' icon is a floppy disk most developers under 30 have never held.
 
 <!-- PROFILE:END -->
 
