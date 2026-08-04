@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `11`
+**⏱️ Days since my last public contribution:** `12`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The 'save' icon is a floppy disk most developers under 30 have never held.
+**🧠 Fact of the day:** cURL, released in 1998, now ships in billions of devices including cars and TVs.
 
 <!-- PROFILE:END -->
 
