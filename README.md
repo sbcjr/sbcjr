@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `12`
+**⏱️ Days since my last public contribution:** `13`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** cURL, released in 1998, now ships in billions of devices including cars and TVs.
+**🧠 Fact of the day:** A byte wasn't always 8 bits - early machines used 6, 7, or 9-bit bytes.
 
 <!-- PROFILE:END -->
 
