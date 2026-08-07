@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `14`
+**⏱️ Days since my last public contribution:** `15`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The Linux penguin is named Tux; Torvalds picked a penguin after being bitten by one.
+**🧠 Fact of the day:** The first domain ever registered was symbolics.com, in March 1985.
 
 <!-- PROFILE:END -->
 
