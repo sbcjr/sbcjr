@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `15`
+**⏱️ Days since my last public contribution:** `16`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The first domain ever registered was symbolics.com, in March 1985.
+**🧠 Fact of the day:** The first computer "bug" was a literal moth, taped into Grace Hopper's 1947 logbook.
 
 <!-- PROFILE:END -->
 
