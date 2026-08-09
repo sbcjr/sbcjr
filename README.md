@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `16`
+**⏱️ Days since my last public contribution:** `17`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The first computer "bug" was a literal moth, taped into Grace Hopper's 1947 logbook.
+**🧠 Fact of the day:** The term 'debugging' predates computers - engineers 'debugged' hardware for decades prior.
 
 <!-- PROFILE:END -->
 
