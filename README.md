@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `17`
+**⏱️ Days since my last public contribution:** `18`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The term 'debugging' predates computers - engineers 'debugged' hardware for decades prior.
+**🧠 Fact of the day:** Python is named after Monty Python, not the snake.
 
 <!-- PROFILE:END -->
 
