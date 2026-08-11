@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `18`
+**⏱️ Days since my last public contribution:** `19`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** Python is named after Monty Python, not the snake.
+**🧠 Fact of the day:** The '@' in email was chosen by Ray Tomlinson in 1971 because it was unlikely to appear in names.
 
 <!-- PROFILE:END -->
 
