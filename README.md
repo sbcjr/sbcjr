@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `19`
+**⏱️ Days since my last public contribution:** `20`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The '@' in email was chosen by Ray Tomlinson in 1971 because it was unlikely to appear in names.
+**🧠 Fact of the day:** The first 1GB hard drive (1980, IBM 3380) weighed ~550 lbs and cost $40,000.
 
 <!-- PROFILE:END -->
 
