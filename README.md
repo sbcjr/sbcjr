@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `21`
+**⏱️ Days since my last public contribution:** `22`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** 'Hello, World!' comes from Kernighan's 1972 tutorial for the B language.
+**🧠 Fact of the day:** The two hard things in CS: cache invalidation, naming things, and off-by-one errors.
 
 <!-- PROFILE:END -->
 
