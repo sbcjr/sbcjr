@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `22`
+**⏱️ Days since my last public contribution:** `23`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The two hard things in CS: cache invalidation, naming things, and off-by-one errors.
+**🧠 Fact of the day:** Git was written by Linus Torvalds in ~2 weeks in 2005 after a BitKeeper falling-out.
 
 <!-- PROFILE:END -->
 
