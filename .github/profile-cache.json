@@ -37,12 +37,13 @@
       "stakes_override": "WCWS National Semifinal",
       "stakes_override_game": "6599924",
       "record": "49-12",
-      "fetched": "2026-08-17"
+      "fetched": "2026-08-18"
     }
   },
   "ranks": {
     "mbb": "12",
-    "softball": "4"
+    "softball": "4",
+    "football": "20"
   },
   "poll_records": {
     "mbb": "25-12",

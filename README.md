@@ -32,7 +32,7 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football | UT @ Illinois | 🔴 L 28-30 - Music City Bowl | 8-5 |
+| 🏈 Football (#20) | UT @ Illinois | 🔴 L 28-30 - Music City Bowl | 8-5 |
 | 🏀 Men's Basketball (#12) | UT @ Michigan | 🔴 L 62-95 - Elite 8 | 25-12 |
 | 🏀 Lady Vols Basketball | UT @ NC State | 🔴 L 61-76 - 1st Round | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - Elimination Game | 38-22 |
@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `25`
+**⏱️ Days since my last public contribution:** `26`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** A 'jiffy' is a real unit of time - often ~10 ms - used in some OS kernels.
+**🧠 Fact of the day:** The first webcam watched a coffee pot at Cambridge so no one wasted a trip for an empty pot.
 
 <!-- PROFILE:END -->
 
