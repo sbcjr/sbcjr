@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `26`
+**⏱️ Days since my last public contribution:** `27`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The first webcam watched a coffee pot at Cambridge so no one wasted a trip for an empty pot.
+**🧠 Fact of the day:** JavaScript was created in 10 days in 1995 by Brendan Eich.
 
 <!-- PROFILE:END -->
 
