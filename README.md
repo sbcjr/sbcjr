@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `28`
+**⏱️ Days since my last public contribution:** `29`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The Apollo 11 guidance computer had ~4 KB of RAM - less than a single emoji today.
+**🧠 Fact of the day:** 'Foobar' likely derives from the WWII-era military slang 'FUBAR'.
 
 <!-- PROFILE:END -->
 
