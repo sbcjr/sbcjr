@@ -32,7 +32,7 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football (#18) | UT @ Illinois | 🔴 L 28-30 - Music City Bowl | 8-5 |
+| 🏈 Football (#15) | UT @ Illinois | 🔴 L 28-30 - Music City Bowl | 8-5 |
 | 🏀 Men's Basketball (#12) | UT @ Michigan | 🔴 L 62-95 - Elite 8 | 25-12 |
 | 🏀 Lady Vols Basketball | UT @ NC State | 🔴 L 61-76 - 1st Round | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - Elimination Game | 38-22 |
@@ -40,10 +40,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `52`
+**⏱️ Days since my last public contribution:** `53`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The first version of Unix (1969) fit on a machine with 24 KB of memory.
+**🧠 Fact of the day:** SQL was originally called SEQUEL, but the name was already trademarked.
 
 <!-- PROFILE:END -->
 
