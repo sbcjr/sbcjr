@@ -1,32 +1,34 @@
 #!/usr/bin/env python3
 """Rewrites the generated block in README.md.
 
-Two data sources, each used for what it can actually do:
+All five Vols sports plus poll rankings come from the NCAA API
+(ncaa-api.henrygd.me). ESPN's site API was the original score source but began
+returning 403 (Akamai bot protection) from datacenter IPs in Aug 2026, so it is
+no longer used.
 
-- ESPN site API  -> football, both basketballs, baseball. It exposes a team
-  schedule endpoint, so one call per sport yields the latest result, a named
-  postseason "stakes" headline (e.g. "Music City Bowl"), and the season record.
-- NCAA API       -> poll rankings for all five sports, plus softball scores,
-  which ESPN does not carry at all. It has no team-history endpoint, so softball
-  is found by pulling the season's game dates and walking backwards through the
-  daily scoreboard until Tennessee appears (bounded, and throttled well under
-  the published 5 req/sec limit).
+The NCAA API has no team-history endpoint, so the most recent game is found by
+pulling the season's game slots from /schedule-alt and walking backwards through
+/scoreboard until Tennessee appears. Most sports index the scoreboard by date
+(YYYY/MM/DD); football indexes by week (YYYY/WK). The walk-back is bounded and
+throttled well under the published 5 req/sec limit.
 
 Also computes days since the last *public* GitHub contribution and picks a
 deterministic fact for the day. Everything degrades gracefully:
 
-- Scores are cached in .github/profile-cache.json. If a sport can't be
-  fetched (out of season, ESPN hiccup), the last successfully retrieved score is
-  kept and re-rendered - never an error row.
-- The NCAA payload gives a numeric bracketRound rather than a round *name*, so
-  softball's stakes default to the game date. --set-softball writes a nicer
-  label that sticks to that specific game and is cleared once a newer one lands.
+- Scores/ranks are cached in .github/profile-cache.json. If a sport can't be
+  fetched, the last successfully retrieved value is kept - never an error row.
+- Season record comes from the poll when Tennessee is ranked, else the standings
+  endpoint, else the cached value.
+- The NCAA feed gives a numeric round, not a name, so stakes default to the game
+  date. --set-stakes pins a nicer label ("Music City Bowl") to that specific
+  game; the auto date returns once a newer game is played.
 - The contribution timer anchors to a cached date, so the counter keeps ticking
   up even after old public events roll out of GitHub's events feed.
 
 Usage:
-  python scripts/update_profile.py            # fetch live, update README + cache
-  python scripts/update_profile.py --offline  # skip network, render from cache
+  python scripts/update_profile.py                     # fetch live, update all
+  python scripts/update_profile.py --offline           # render from cache only
+  python scripts/update_profile.py --set-stakes football "Music City Bowl"
 """
 
 from __future__ import annotations
@@ -60,28 +62,25 @@ GH_USER = os.environ.get("GH_USER", "sbcjr")
 GH_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 OFFLINE = "--offline" in sys.argv
 
-# Verified ESPN site-API coordinates. Tennessee shares team id 2633 for football
-# and both basketballs, but baseball is a different id (199). "manual" sports have
-# no dependable ESPN team-schedule endpoint and simply persist their cached score.
+# NCAA API sport slugs. Football is division "fbs" and its scoreboard is indexed
+# by week (YYYY/WK); the rest are "d1" and indexed by date (YYYY/MM/DD).
 SPORTS = [
     {"key": "football", "label": "🏈 Football",
-     "sport": "football", "league": "college-football", "team": "2633"},
+     "ncaa_sport": "football", "division": "fbs", "weekly": True},
     {"key": "mbb", "label": "🏀 Men's Basketball",
-     "sport": "basketball", "league": "mens-college-basketball", "team": "2633"},
+     "ncaa_sport": "basketball-men", "division": "d1"},
     {"key": "wbb", "label": "🏀 Lady Vols Basketball",
-     "sport": "basketball", "league": "womens-college-basketball", "team": "2633"},
+     "ncaa_sport": "basketball-women", "division": "d1"},
     {"key": "baseball", "label": "⚾ Baseball",
-     "sport": "baseball", "league": "college-baseball", "team": "199"},
+     "ncaa_sport": "baseball", "division": "d1"},
     {"key": "softball", "label": "🥎 Softball",
-     "ncaa": {"sport": "softball", "division": "d1"}},
+     "ncaa_sport": "softball", "division": "d1"},
 ]
 
-# Poll rankings come from the NCAA API (ncaa-api.henrygd.me). It has no
-# team-history endpoint, so scores still come from ESPN; this is rankings only.
-# The service allows 5 req/sec - we send 5 requests total, spaced well under it.
+# NCAA API (ncaa-api.henrygd.me). Allows 5 req/sec; we stay well under it.
 NCAA_BASE = "https://ncaa-api.henrygd.me/"
 NCAA_DELAY = 0.6
-NCAA_MAX_LOOKBACK = 8  # scoreboard dates to walk back before giving up
+NCAA_MAX_LOOKBACK = 25  # scoreboard slots to walk back (covers early tourney exits)
 RANKINGS = {
     "football": "rankings/football/fbs/associated-press",
     "mbb": "rankings/basketball-men/d1/associated-press",
@@ -134,15 +133,6 @@ def http_get_json(url: str, token: str = "") -> dict | None:
         return None
 
 
-def parse_when(raw: str) -> str:
-    """Fallback label for games with no postseason headline, e.g. 'March 17'."""
-    try:
-        dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
-        return f"{dt:%B} {dt.day}"
-    except ValueError:
-        return "-"
-
-
 def tennessee_rank(entries: list) -> str | None:
     """Find Tennessee's rank in an NCAA rankings payload.
 
@@ -191,157 +181,133 @@ def refresh_ranks(cache: dict) -> dict:
     return cache
 
 
-def ncaa_latest_game(sport: str, division: str) -> dict | None:
+def _parse_mdy(raw: str):
+    try:
+        return datetime.strptime(raw.strip(), "%m/%d/%Y").date()
+    except (ValueError, AttributeError):
+        return None
+
+
+def _tn_final_from_board(board: dict | None) -> tuple | None:
+    """Latest completed Tennessee game on a scoreboard slate, or None.
+
+    A slate can hold two Tennessee games (e.g. a doubleheader or a best-of-3),
+    so the latest by startTimeEpoch wins. Matches "Tennessee" exactly so it
+    never picks up Tennessee Tech, Tennessee St., or Middle Tenn.
+    """
+    best = None
+    for entry in (board or {}).get("games", []):
+        gm = entry.get("game") or {}
+        if gm.get("gameState") != "final":
+            continue
+        for side in ("home", "away"):
+            if ((gm.get(side) or {}).get("names") or {}).get("short") == "Tennessee":
+                epoch = int(gm.get("startTimeEpoch") or 0)
+                if best is None or epoch > best[0]:
+                    best = (epoch, gm, side)
+    return best
+
+
+def _game_to_row(gm: dict, side: str) -> dict:
+    other = "away" if side == "home" else "home"
+    opp = ((gm.get(other) or {}).get("names") or {}).get("short") or "TBD"
+
+    def score(which: str) -> int:
+        try:
+            return int((gm.get(which) or {}).get("score") or 0)
+        except (TypeError, ValueError):
+            return 0
+
+    marker = "🟢 W" if (gm.get(side) or {}).get("winner") else "🔴 L"
+    joiner = "vs." if side == "home" else "@"
+    played = _parse_mdy(gm.get("startDate") or "")
+    when = f"{played:%B} {played.day}" if played else (gm.get("startDate") or "-")
+    return {
+        "matchup": f"UT {joiner} {opp}",
+        "result": f"{marker} {score(side)}-{score(other)}",
+        "stakes": when,
+        "game_id": str(gm.get("gameID") or ""),
+    }
+
+
+def ncaa_latest_game(sport_cfg: dict, cached_watermark: str | None = None) -> dict | None:
     """Most recent completed Tennessee game via the NCAA API.
 
-    The API has no team-history endpoint, so this pulls the season's game dates
-    from /schedule-alt and walks backwards through /scoreboard until Tennessee
-    appears. Bounded by NCAA_MAX_LOOKBACK so a quiet stretch can't spiral into
-    dozens of requests. Multiple games on one day are ordered by startTimeEpoch.
+    Pulls the season's slots from /schedule-alt, keeps only those already begun,
+    and walks backwards through /scoreboard (by date, or by week for football)
+    until a completed Tennessee game turns up. Bounded by NCAA_MAX_LOOKBACK.
+
+    Returns {"unchanged": True} when no new game slot has appeared since the
+    cached watermark (a settled season) so the daily job skips a pointless walk.
+    Football is exempt: its slot is a whole week, so a fresh result can land
+    without the slot date advancing, and it's cheap to walk anyway.
     """
-    year = datetime.now(timezone.utc).year
+    sport, division = sport_cfg["ncaa_sport"], sport_cfg["division"]
+    weekly = sport_cfg.get("weekly", False)
+    today = datetime.now(timezone.utc).date()
+    year = today.year
     for season in (year, year - 1):
         sched = http_get_json(f"{NCAA_BASE}schedule-alt/{sport}/{division}/{season}")
         time.sleep(NCAA_DELAY)
-        games = (((sched or {}).get("data") or {}).get("schedules") or {}).get("games") or []
-        dates = [g.get("contestDate") for g in games if g.get("contestDate")]
-        if not dates:
-            continue
-        for contest_date in list(reversed(dates))[:NCAA_MAX_LOOKBACK]:
-            try:
-                mm, dd, yy = contest_date.split("/")
-            except ValueError:
+        entries = (((sched or {}).get("data") or {}).get("schedules") or {}).get("games") or []
+        slots = []  # (scoreboard_path, start_date) for slots that have begun
+        for idx, entry in enumerate(entries, start=1):
+            contest = entry.get("contestDate") or ""
+            # Football slots are week ranges "MM/DD/YYYY-MM/DD/YYYY" indexed by the
+            # 1-based week number; other sports are single dates. Use the range
+            # start so an in-progress week/day is considered.
+            begun = _parse_mdy(contest.split("-")[0])
+            if not begun:
                 continue
-            board = http_get_json(f"{NCAA_BASE}scoreboard/{sport}/{division}/{yy}/{mm}/{dd}")
+            path = f"{season}/{idx:02d}" if weekly else f"{begun:%Y}/{begun:%m}/{begun:%d}"
+            slots.append((path, begun))
+        past = [s for s in slots if s[1] <= today]
+        if not past:
+            continue
+        watermark = past[-1][1].isoformat()
+        if not weekly and cached_watermark and watermark <= cached_watermark:
+            return {"unchanged": True}
+        for path, _date in reversed(past[-NCAA_MAX_LOOKBACK:]):
+            board = http_get_json(f"{NCAA_BASE}scoreboard/{sport}/{division}/{path}")
             time.sleep(NCAA_DELAY)
-            best = None
-            for entry in (board or {}).get("games", []):
-                gm = entry.get("game") or {}
-                if gm.get("gameState") != "final":
-                    continue
-                for side in ("home", "away"):
-                    names = (gm.get(side) or {}).get("names") or {}
-                    if names.get("short") == "Tennessee":
-                        epoch = int(gm.get("startTimeEpoch") or 0)
-                        if best is None or epoch > best[0]:
-                            best = (epoch, gm, side)
-            if not best:
-                continue
-            _, gm, side = best
-            other = "away" if side == "home" else "home"
-            opp = ((gm.get(other) or {}).get("names") or {}).get("short") or "TBD"
-            try:
-                us_score = int((gm.get(side) or {}).get("score") or 0)
-                them_score = int((gm.get(other) or {}).get("score") or 0)
-            except (TypeError, ValueError):
-                us_score = them_score = 0
-            marker = "🟢 W" if (gm.get(side) or {}).get("winner") else "🔴 L"
-            joiner = "vs." if side == "home" else "@"
-            try:
-                dt = datetime.strptime(gm.get("startDate") or contest_date, "%m/%d/%Y")
-                when = f"{dt:%B} {dt.day}"
-            except ValueError:
-                when = contest_date
-            return {
-                "matchup": f"UT {joiner} {opp}",
-                "result": f"{marker} {us_score}-{them_score}",
-                "stakes": when,
-                "game_id": str(gm.get("gameID") or ""),
-            }
+            best = _tn_final_from_board(board)
+            if best:
+                row = _game_to_row(best[1], best[2])
+                row["slot_watermark"] = watermark
+                return row
     return None
 
 
-def _score(competitor: dict) -> int:
-    raw = competitor.get("score")
-    if isinstance(raw, dict):
-        raw = raw.get("displayValue") or raw.get("value")
-    try:
-        return int(float(raw))
-    except (TypeError, ValueError):
-        return 0
-
-
-def stakes_label(headline: str) -> str:
-    """Condense an ESPN game headline into a short 'stakes' label.
-
-    'NCAA Men's Basketball Championship - Midwest Region - Elite 8' -> 'Elite 8'
-    'SEC Tournament - Quarterfinal'                                 -> 'SEC Quarterfinal'
-    'Liberty Mutual Music City Bowl'                                -> 'Music City Bowl'
-    """
-    if not headline:
-        return ""
-    parts = [p.strip() for p in headline.split(" - ") if p.strip()]
-    if len(parts) >= 2:
-        tail = parts[-1]
-        acronym = re.match(r"^([A-Z]{2,5})\b", parts[0])
-        if acronym and acronym.group(1) != "NCAA" and acronym.group(1) not in tail:
-            return f"{acronym.group(1)} {tail}"
-        return tail
-    words = parts[0].split()
-    if words and words[-1].lower() == "bowl" and len(words) > 3:
-        return " ".join(words[-3:])  # drop the sponsor prefix
-    return parts[0]
-
-
-def _extract_game(event: dict, team_id: str) -> tuple | None:
-    """Return (us, them, raw_date, dt, headline) for a completed game, else None."""
-    comps = event.get("competitions") or []
-    if not comps:
-        return None
-    comp = comps[0]
-    status = (comp.get("status") or event.get("status") or {}).get("type", {})
-    if not status.get("completed"):
-        return None
-    competitors = comp.get("competitors") or []
-    us = next((c for c in competitors if str((c.get("team") or {}).get("id")) == team_id), None)
-    them = next((c for c in competitors if c is not us), None)
-    if not us or not them:
-        return None
-    raw_date = event.get("date") or comp.get("date") or ""
-    try:
-        dt = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
-    except ValueError:
-        return None
-    notes = comp.get("notes") or event.get("notes") or []
-    headline = next((n.get("headline") for n in notes
-                     if isinstance(n, dict) and n.get("headline")), "")
-    return us, them, raw_date, dt, headline
-
-
-def team_season_summary(sport: str, league: str, team_id: str) -> dict | None:
-    """Most recent completed game + season W-L record.
-
-    Fetches both regular (seasontype=2) and postseason (seasontype=3) so bowls,
-    conference tourneys, and the CWS count. Falls back a season for the offseason.
-    """
-    year = datetime.now(timezone.utc).year
-    base = (f"https://site.api.espn.com/apis/site/v2/sports/{sport}/{league}"
-            f"/teams/{team_id}/schedule")
-    for season in (year, year - 1):
-        games = []
-        for stype in (2, 3):  # 2 = regular season, 3 = postseason
-            data = http_get_json(f"{base}?season={season}&seasontype={stype}")
-            for event in (data or {}).get("events", []):
-                game = _extract_game(event, team_id)
-                if game:
-                    games.append(game)
-        if not games:
-            continue
-        wins = sum(1 for g in games if g[0].get("winner"))
-        losses = sum(1 for g in games
-                     if not g[0].get("winner") and g[1].get("winner"))
-        us, them, raw_date, _dt, headline = max(games, key=lambda g: g[3])
-        opp = ((them.get("team") or {}).get("shortDisplayName")
-               or (them.get("team") or {}).get("displayName") or "TBD")
-        joiner = "vs." if us.get("homeAway", "home") == "home" else "@"
-        marker = "🟢 W" if us.get("winner") else "🔴 L"
-        return {
-            "matchup": f"UT {joiner} {opp}",
-            "result": f"{marker} {_score(us)}-{_score(them)}",
-            "stakes": stakes_label(headline) or parse_when(raw_date),
-            "record": f"{wins}-{losses}",
-        }
+def _tn_overall_from_standings(payload) -> str | None:
+    """Tennessee's overall W-L from a standings payload, or None."""
+    if isinstance(payload, dict):
+        if payload.get("School") == "Tennessee" and "Overall W" in payload:
+            return f"{payload['Overall W']}-{payload['Overall L']}"
+        for value in payload.values():
+            found = _tn_overall_from_standings(value)
+            if found:
+                return found
+    elif isinstance(payload, list):
+        for value in payload:
+            found = _tn_overall_from_standings(value)
+            if found:
+                return found
     return None
+
+
+def team_record(sport_cfg: dict, cache: dict) -> str:
+    """Season record: poll figure if ranked, else standings, else cached."""
+    key = sport_cfg["key"]
+    poll = cache.get("poll_records", {}).get(key)
+    if poll:
+        return poll
+    standings = http_get_json(
+        f"{NCAA_BASE}standings/{sport_cfg['ncaa_sport']}/{sport_cfg['division']}")
+    time.sleep(NCAA_DELAY)
+    found = _tn_overall_from_standings(standings)
+    if found:
+        return found
+    return cache.get("scores", {}).get(key, {}).get("record") or "-"
 
 
 def _days_from_anchor(cache: dict) -> int:
@@ -394,44 +360,33 @@ def save_cache(cache: dict) -> None:
 
 def refresh_scores(cache: dict) -> dict:
     scores = cache.setdefault("scores", {})
+    if OFFLINE:
+        return cache
     for sport in SPORTS:
         key = sport["key"]
-        if OFFLINE:
+        prev = scores.get(key, {})
+        print(f"Fetching {key} (NCAA {sport['ncaa_sport']}/{sport['division']}) ...")
+        got = ncaa_latest_game(sport, prev.get("slot_watermark"))
+        if got and got.get("unchanged"):
+            print(f"  {key} no new games - kept {prev.get('result', '?')} ({prev.get('fetched', '?')})")
             continue
-        if sport.get("ncaa"):
-            cfg = sport["ncaa"]
-            print(f"Fetching {key} (NCAA {cfg['sport']}/{cfg['division']}) ...")
-            got = ncaa_latest_game(cfg["sport"], cfg["division"])
-            if got:
-                prev = scores.get(key, {})
-                override = prev.get("stakes_override")
-                bound = prev.get("stakes_override_game")
-                # A manual label sticks to the game it describes. Unbound labels
-                # bind to the first game seen; a new game clears a stale label.
-                if override and (not bound or bound == got["game_id"]):
-                    got["stakes"] = override
-                    got["stakes_override"] = override
-                    got["stakes_override_game"] = got["game_id"]
-                got["record"] = (cache.get("poll_records", {}).get(key)
-                                 or prev.get("record") or "-")
-                got["fetched"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-                scores[key] = got
-                print(f"  -> {got['result']} ({got['matchup']}, {got['stakes']}) | record {got['record']}")
-            elif key in scores:
+        if not got:
+            if key in scores:
                 print(f"  {key} unavailable - keeping cached score from {scores[key].get('fetched', '?')}")
             else:
                 print(f"  {key} unavailable and no cached score yet")
             continue
-        print(f"Fetching {key} ({sport['sport']}/{sport['league']}, team {sport['team']}) ...")
-        got = team_season_summary(sport["sport"], sport["league"], sport["team"])
-        if got:
-            got["fetched"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-            scores[key] = got
-            print(f"  -> {got['result']} ({got['matchup']}, {got['stakes']}) | record {got['record']}")
-        elif key in scores:
-            print(f"  {key} unavailable - keeping cached score from {scores[key].get('fetched', '?')}")
-        else:
-            print(f"  {key} unavailable and no cached score yet")
+        override = prev.get("stakes_override")
+        bound = prev.get("stakes_override_game")
+        # A manual label sticks to the game it describes; a new game clears it.
+        if override and (not bound or bound == got["game_id"]):
+            got["stakes"] = override
+            got["stakes_override"] = override
+            got["stakes_override_game"] = got["game_id"]
+        got["record"] = team_record(sport, cache)
+        got["fetched"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        scores[key] = got
+        print(f"  -> {got['result']} ({got['matchup']}, {got['stakes']}) | record {got['record']}")
     return cache
 
 
@@ -486,44 +441,41 @@ def write_readme(cache: dict, days: int) -> bool:
     return True
 
 
-def set_softball() -> int:
-    """`--set-softball "<matchup>" <W|L> <score> "<stakes>" <record>`
+def set_stakes() -> int:
+    """`--set-stakes <sport-key> "<label>"`
 
-    e.g. --set-softball "UT vs. Texas" L 0-4 "WCWS National Semifinal" 49-12
-    Softball has no reliable feed, so this is how you refresh its row by hand.
+    e.g. --set-stakes football "Music City Bowl"
+    The NCAA feed gives a numeric round, not a name, so stakes default to the
+    game date. This pins a nicer label to that sport's current game; the auto
+    date returns once a newer game is played. Run an update first so there's a
+    game to attach to.
     """
-    i = sys.argv.index("--set-softball")
-    vals = sys.argv[i + 1:i + 6]
-    if len(vals) < 5:
-        print('usage: --set-softball "<matchup>" <W|L> <score> "<stakes>" <record>')
-        print('e.g.   --set-softball "UT vs. Texas" L 0-4 "WCWS National Semifinal" 49-12')
+    keys = [s["key"] for s in SPORTS]
+    i = sys.argv.index("--set-stakes")
+    vals = sys.argv[i + 1:i + 3]
+    if len(vals) < 2 or vals[0] not in keys:
+        print('usage: --set-stakes <key> "<label>"')
+        print("  keys: " + ", ".join(keys))
         return 2
-    matchup, outcome, score, stakes, record = vals[:5]
-    marker = "🟢 W" if outcome.upper().startswith("W") else "🔴 L"
+    key, label = vals[0], vals[1]
     cache = load_cache()
-    prev = cache.setdefault("scores", {}).get("softball", {})
-    cache["scores"]["softball"] = {
-        "matchup": matchup,
-        "result": f"{marker} {score}",
-        "stakes": stakes,
-        "record": record,
-        # The label sticks to this specific game; when a newer one is fetched
-        # the auto date label takes over again.
-        "stakes_override": stakes,
-        "stakes_override_game": prev.get("game_id", ""),
-        "game_id": prev.get("game_id", ""),
-        "fetched": "manual",
-    }
+    row = cache.setdefault("scores", {}).get(key)
+    if not row:
+        print(f"no cached game for {key} yet - run an update first")
+        return 1
+    row["stakes"] = label
+    row["stakes_override"] = label
+    row["stakes_override_game"] = row.get("game_id", "")
     if not write_readme(cache, _days_from_anchor(cache)):
         return 1
     save_cache(cache)
-    print(f"Softball set: {marker} {score} - {matchup} ({stakes}), record {record}.")
+    print(f"{key} stakes set to '{label}' (bound to game {row.get('game_id') or '?'}).")
     return 0
 
 
 def main() -> int:
-    if "--set-softball" in sys.argv:
-        return set_softball()
+    if "--set-stakes" in sys.argv:
+        return set_stakes()
 
     cache = load_cache()
     cache = refresh_ranks(cache)

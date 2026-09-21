@@ -18,11 +18,10 @@
 ---
 
 <!--
-  All five sports auto-update daily: football/basketball/baseball from ESPN,
-  softball and every poll ranking from the NCAA API.
-  Softball's stakes default to the game date (the NCAA feed gives a numeric
-  round, not a name). To set a nicer label for the current game:
-    python scripts/update_profile.py --set-softball "UT @ Texas" L 0-4 "WCWS National Semifinal" 49-12
+  All five sports and every poll ranking auto-update daily from the NCAA API.
+  Stakes default to the game date (the feed gives a numeric round, not a name).
+  To pin a nicer label to a sport's current game:
+    python scripts/update_profile.py --set-stakes football "Music City Bowl"
   That label sticks to that game and clears itself once a newer one is played.
 -->
 <!-- PROFILE:START -->
@@ -32,18 +31,18 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football (#15) | UT @ Illinois | 🔴 L 28-30 - Music City Bowl | 8-5 |
-| 🏀 Men's Basketball (#12) | UT @ Michigan | 🔴 L 62-95 - Elite 8 | 25-12 |
-| 🏀 Lady Vols Basketball | UT @ NC State | 🔴 L 61-76 - 1st Round | 16-14 |
-| ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - Elimination Game | 38-22 |
+| 🏈 Football (#14) | UT vs. Kennesaw St. | 🟢 W 42-9 - September 19 | 3-0 |
+| 🏀 Men's Basketball (#12) | UT @ Michigan | 🔴 L 62-95 - March 29 | 25-12 |
+| 🏀 Lady Vols Basketball | UT @ NC State | 🔴 L 61-76 - March 20 | 16-14 |
+| ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
 | 🥎 Softball (#4) | UT @ Texas | 🔴 L 0-4 - WCWS National Semifinal | 49-12 |
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `59`
+**⏱️ Days since my last public contribution:** `60`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The first domain ever registered was symbolics.com, in March 1985.
+**🧠 Fact of the day:** The first computer "bug" was a literal moth, taped into Grace Hopper's 1947 logbook.
 
 <!-- PROFILE:END -->
 
