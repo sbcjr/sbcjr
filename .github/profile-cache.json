@@ -2,13 +2,13 @@
   "contrib_anchor": "2026-09-21",
   "scores": {
     "football": {
-      "matchup": "UT vs. Kennesaw St.",
-      "result": "🟢 W 42-9",
-      "stakes": "September 19",
-      "game_id": "6604021",
+      "matchup": "UT vs. Texas",
+      "result": "🔴 L 17-20",
+      "stakes": "September 26",
+      "game_id": "6604023",
       "slot_watermark": "2026-09-24",
       "record": "3-0",
-      "fetched": "2026-09-26"
+      "fetched": "2026-09-27"
     },
     "mbb": {
       "matchup": "UT @ Michigan",

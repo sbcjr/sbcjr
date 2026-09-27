@@ -31,7 +31,7 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football (#14) | UT vs. Kennesaw St. | 🟢 W 42-9 - September 19 | 3-0 |
+| 🏈 Football (#14) | UT vs. Texas | 🔴 L 17-20 - September 26 | 3-0 |
 | 🏀 Men's Basketball (#12) | UT @ Michigan | 🔴 L 62-95 - March 29 | 25-12 |
 | 🏀 Lady Vols Basketball | UT @ NC State | 🔴 L 61-76 - March 20 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
@@ -39,10 +39,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `5`
+**⏱️ Days since my last public contribution:** `6`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** 'Hello, World!' comes from Kernighan's 1972 tutorial for the B language.
+**🧠 Fact of the day:** The two hard things in CS: cache invalidation, naming things, and off-by-one errors.
 
 <!-- PROFILE:END -->
 
