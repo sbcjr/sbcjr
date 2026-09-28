@@ -7,8 +7,8 @@
       "stakes": "September 26",
       "game_id": "6604023",
       "slot_watermark": "2026-09-24",
-      "record": "3-0",
-      "fetched": "2026-09-27"
+      "record": "3-1",
+      "fetched": "2026-09-28"
     },
     "mbb": {
       "matchup": "UT @ Michigan",
@@ -52,11 +52,11 @@
   "ranks": {
     "mbb": "12",
     "softball": "4",
-    "football": "14"
+    "football": "17"
   },
   "poll_records": {
     "mbb": "25-12",
     "softball": "49-12",
-    "football": "3-0"
+    "football": "3-1"
   }
 }
