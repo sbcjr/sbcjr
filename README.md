@@ -39,10 +39,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `9`
+**⏱️ Days since my last public contribution:** `10`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** A 'jiffy' is a real unit of time - often ~10 ms - used in some OS kernels.
+**🧠 Fact of the day:** The first webcam watched a coffee pot at Cambridge so no one wasted a trip for an empty pot.
 
 <!-- PROFILE:END -->
 
