@@ -31,7 +31,7 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football (#17) | UT vs. Texas | 🔴 L 17-20 - September 26 | 3-1 |
+| 🏈 Football (#17) | UT vs. Auburn | 🟢 W 24-14 - October 3 | 3-1 |
 | 🏀 Men's Basketball (#12) | UT @ Michigan | 🔴 L 62-95 - March 29 | 25-12 |
 | 🏀 Lady Vols Basketball | UT @ NC State | 🔴 L 61-76 - March 20 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
@@ -39,10 +39,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `12`
+**⏱️ Days since my last public contribution:** `13`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The Apollo 11 guidance computer had ~4 KB of RAM - less than a single emoji today.
+**🧠 Fact of the day:** 'Foobar' likely derives from the WWII-era military slang 'FUBAR'.
 
 <!-- PROFILE:END -->
 

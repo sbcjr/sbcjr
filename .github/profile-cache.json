@@ -2,13 +2,13 @@
   "contrib_anchor": "2026-09-21",
   "scores": {
     "football": {
-      "matchup": "UT vs. Texas",
-      "result": "🔴 L 17-20",
-      "stakes": "September 26",
-      "game_id": "6604023",
+      "matchup": "UT vs. Auburn",
+      "result": "🟢 W 24-14",
+      "stakes": "October 3",
+      "game_id": "6604026",
       "slot_watermark": "2026-10-01",
       "record": "3-1",
-      "fetched": "2026-10-03"
+      "fetched": "2026-10-04"
     },
     "mbb": {
       "matchup": "UT @ Michigan",
