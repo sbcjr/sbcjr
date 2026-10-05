@@ -31,7 +31,7 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football (#17) | UT vs. Auburn | 🟢 W 24-14 - October 3 | 3-1 |
+| 🏈 Football (#15) | UT vs. Auburn | 🟢 W 24-14 - October 3 | 4-1 |
 | 🏀 Men's Basketball (#12) | UT @ Michigan | 🔴 L 62-95 - March 29 | 25-12 |
 | 🏀 Lady Vols Basketball | UT @ NC State | 🔴 L 61-76 - March 20 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
@@ -39,10 +39,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `13`
+**⏱️ Days since my last public contribution:** `14`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** 'Foobar' likely derives from the WWII-era military slang 'FUBAR'.
+**🧠 Fact of the day:** The first version of Unix (1969) fit on a machine with 24 KB of memory.
 
 <!-- PROFILE:END -->
 
