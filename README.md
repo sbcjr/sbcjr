@@ -31,7 +31,7 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football (#15) | UT vs. Auburn | 🟢 W 24-14 - October 3 | 4-1 |
+| 🏈 Football (#15) | UT @ Arkansas | 🟢 W 24-17 - October 10 | 4-1 |
 | 🏀 Men's Basketball (#12) | UT @ Michigan | 🔴 L 62-95 - March 29 | 25-12 |
 | 🏀 Lady Vols Basketball | UT @ NC State | 🔴 L 61-76 - March 20 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
@@ -39,10 +39,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `19`
+**⏱️ Days since my last public contribution:** `20`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** A byte wasn't always 8 bits - early machines used 6, 7, or 9-bit bytes.
+**🧠 Fact of the day:** The Linux penguin is named Tux; Torvalds picked a penguin after being bitten by one.
 
 <!-- PROFILE:END -->
 
