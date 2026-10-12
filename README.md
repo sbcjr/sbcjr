@@ -31,7 +31,7 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football (#15) | UT @ Arkansas | 🟢 W 24-17 - October 10 | 4-1 |
+| 🏈 Football (#14) | UT @ Arkansas | 🟢 W 24-17 - October 10 | 5-1 |
 | 🏀 Men's Basketball (#12) | UT @ Michigan | 🔴 L 62-95 - March 29 | 25-12 |
 | 🏀 Lady Vols Basketball | UT @ NC State | 🔴 L 61-76 - March 20 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
@@ -39,10 +39,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `20`
+**⏱️ Days since my last public contribution:** `21`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The Linux penguin is named Tux; Torvalds picked a penguin after being bitten by one.
+**🧠 Fact of the day:** The first domain ever registered was symbolics.com, in March 1985.
 
 <!-- PROFILE:END -->
 
