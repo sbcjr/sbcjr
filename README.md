@@ -32,17 +32,17 @@
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
 | 🏈 Football (#11) | UT vs. Alabama | 🟢 W 26-10 - October 17 | 6-1 |
-| 🏀 Men's Basketball (#12) | UT @ Michigan | 🔴 L 62-95 - March 29 | 25-12 |
+| 🏀 Men's Basketball (#8) | UT @ Michigan | 🔴 L 62-95 - March 29 | 25-12 |
 | 🏀 Lady Vols Basketball | UT @ NC State | 🔴 L 61-76 - March 20 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
 | 🥎 Softball (#4) | UT @ Texas | 🔴 L 0-4 - WCWS National Semifinal | 49-12 |
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `28`
+**⏱️ Days since my last public contribution:** `29`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The two hard things in CS: cache invalidation, naming things, and off-by-one errors.
+**🧠 Fact of the day:** Git was written by Linus Torvalds in ~2 weeks in 2005 after a BitKeeper falling-out.
 
 <!-- PROFILE:END -->
 
