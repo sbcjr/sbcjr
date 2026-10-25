@@ -31,7 +31,7 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football (#11) | UT vs. Alabama | 🟢 W 26-10 - October 17 | 6-1 |
+| 🏈 Football (#11) | UT @ South Carolina | 🔴 L 24-27 - October 24 | 6-1 |
 | 🏀 Men's Basketball (#8) | UT @ Michigan | 🔴 L 62-95 - March 29 | 25-12 |
 | 🏀 Lady Vols Basketball | UT @ NC State | 🔴 L 61-76 - March 20 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
@@ -39,10 +39,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `33`
+**⏱️ Days since my last public contribution:** `34`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** JavaScript was created in 10 days in 1995 by Brendan Eich.
+**🧠 Fact of the day:** The Apollo 11 guidance computer had ~4 KB of RAM - less than a single emoji today.
 
 <!-- PROFILE:END -->
 
