@@ -33,16 +33,16 @@
 |---|---|---|:--:|
 | 🏈 Football (#16) | UT @ South Carolina | 🔴 L 24-27 - October 24 | 6-2 |
 | 🏀 Men's Basketball (#8) | UT vs. Wofford | 🟢 W 90-59 - November 3 | 25-12 |
-| 🏀 Lady Vols Basketball | UT vs. Duquesne | 🟢 W 109-62 - November 2 | 16-14 |
+| 🏀 Lady Vols Basketball | UT @ Coppin St. | 🟢 W 98-60 - November 5 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
 | 🥎 Softball (#4) | UT @ Texas | 🔴 L 0-4 - WCWS National Semifinal | 49-12 |
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `45`
+**⏱️ Days since my last public contribution:** `46`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The term 'debugging' predates computers - engineers 'debugged' hardware for decades prior.
+**🧠 Fact of the day:** Python is named after Monty Python, not the snake.
 
 <!-- PROFILE:END -->
 
