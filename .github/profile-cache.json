@@ -2,31 +2,31 @@
   "contrib_anchor": "2026-09-21",
   "scores": {
     "football": {
-      "matchup": "UT @ South Carolina",
-      "result": "🔴 L 24-27",
-      "stakes": "October 24",
-      "game_id": "6603928",
+      "matchup": "UT vs. Kentucky",
+      "result": "🟢 W 34-6",
+      "stakes": "November 7",
+      "game_id": "6604028",
       "slot_watermark": "2026-11-03",
       "record": "6-2",
-      "fetched": "2026-11-07"
+      "fetched": "2026-11-08"
     },
     "mbb": {
       "matchup": "UT vs. Wofford",
       "result": "🟢 W 90-59",
       "stakes": "November 3",
       "game_id": "6650997",
-      "slot_watermark": "2026-11-07",
+      "slot_watermark": "2026-11-08",
       "record": "25-12",
-      "fetched": "2026-11-07"
+      "fetched": "2026-11-08"
     },
     "wbb": {
       "matchup": "UT @ Coppin St.",
       "result": "🟢 W 98-60",
       "stakes": "November 5",
       "game_id": "6645531",
-      "slot_watermark": "2026-11-07",
+      "slot_watermark": "2026-11-08",
       "record": "16-14",
-      "fetched": "2026-11-07"
+      "fetched": "2026-11-08"
     },
     "baseball": {
       "matchup": "UT @ VCU",

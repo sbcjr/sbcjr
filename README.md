@@ -31,7 +31,7 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football (#16) | UT @ South Carolina | 🔴 L 24-27 - October 24 | 6-2 |
+| 🏈 Football (#16) | UT vs. Kentucky | 🟢 W 34-6 - November 7 | 6-2 |
 | 🏀 Men's Basketball (#8) | UT vs. Wofford | 🟢 W 90-59 - November 3 | 25-12 |
 | 🏀 Lady Vols Basketball | UT @ Coppin St. | 🟢 W 98-60 - November 5 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
@@ -39,10 +39,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `47`
+**⏱️ Days since my last public contribution:** `48`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The '@' in email was chosen by Ray Tomlinson in 1971 because it was unlikely to appear in names.
+**🧠 Fact of the day:** The first 1GB hard drive (1980, IBM 3380) weighed ~550 lbs and cost $40,000.
 
 <!-- PROFILE:END -->
 
