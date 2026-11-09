@@ -31,7 +31,7 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football (#16) | UT vs. Kentucky | 🟢 W 34-6 - November 7 | 6-2 |
+| 🏈 Football (#9) | UT vs. Kentucky | 🟢 W 34-6 - November 7 | 7-2 |
 | 🏀 Men's Basketball (#8) | UT vs. Wofford | 🟢 W 90-59 - November 3 | 25-12 |
 | 🏀 Lady Vols Basketball | UT @ Coppin St. | 🟢 W 98-60 - November 5 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
@@ -39,10 +39,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `48`
+**⏱️ Days since my last public contribution:** `49`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The first 1GB hard drive (1980, IBM 3380) weighed ~550 lbs and cost $40,000.
+**🧠 Fact of the day:** 'Hello, World!' comes from Kernighan's 1972 tutorial for the B language.
 
 <!-- PROFILE:END -->
 

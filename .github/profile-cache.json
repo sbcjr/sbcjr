@@ -7,26 +7,26 @@
       "stakes": "November 7",
       "game_id": "6604028",
       "slot_watermark": "2026-11-03",
-      "record": "6-2",
-      "fetched": "2026-11-08"
+      "record": "7-2",
+      "fetched": "2026-11-09"
     },
     "mbb": {
       "matchup": "UT vs. Wofford",
       "result": "🟢 W 90-59",
       "stakes": "November 3",
       "game_id": "6650997",
-      "slot_watermark": "2026-11-08",
+      "slot_watermark": "2026-11-09",
       "record": "25-12",
-      "fetched": "2026-11-08"
+      "fetched": "2026-11-09"
     },
     "wbb": {
       "matchup": "UT @ Coppin St.",
       "result": "🟢 W 98-60",
       "stakes": "November 5",
       "game_id": "6645531",
-      "slot_watermark": "2026-11-08",
+      "slot_watermark": "2026-11-09",
       "record": "16-14",
-      "fetched": "2026-11-08"
+      "fetched": "2026-11-09"
     },
     "baseball": {
       "matchup": "UT @ VCU",
@@ -52,11 +52,11 @@
   "ranks": {
     "mbb": "8",
     "softball": "4",
-    "football": "16"
+    "football": "9"
   },
   "poll_records": {
     "mbb": "25-12",
     "softball": "49-12",
-    "football": "6-2"
+    "football": "7-2"
   }
 }
