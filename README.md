@@ -33,16 +33,16 @@
 |---|---|---|:--:|
 | 🏈 Football (#9) | UT vs. Kentucky | 🟢 W 34-6 - November 7 | 7-2 |
 | 🏀 Men's Basketball (#11) | UT vs. Radford | 🟢 W 70-47 - November 9 | 1-0 |
-| 🏀 Lady Vols Basketball | UT @ Coppin St. | 🟢 W 98-60 - November 5 | 16-14 |
+| 🏀 Lady Vols Basketball | UT vs. New Haven | 🟢 W 83-40 - November 10 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
 | 🥎 Softball (#4) | UT @ Texas | 🔴 L 0-4 - WCWS National Semifinal | 49-12 |
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `50`
+**⏱️ Days since my last public contribution:** `51`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The two hard things in CS: cache invalidation, naming things, and off-by-one errors.
+**🧠 Fact of the day:** Git was written by Linus Torvalds in ~2 weeks in 2005 after a BitKeeper falling-out.
 
 <!-- PROFILE:END -->
 
