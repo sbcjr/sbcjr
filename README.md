@@ -33,16 +33,16 @@
 |---|---|---|:--:|
 | 🏈 Football (#9) | UT vs. Kentucky | 🟢 W 34-6 - November 7 | 7-2 |
 | 🏀 Men's Basketball (#11) | UT vs. Radford | 🟢 W 70-47 - November 9 | 1-0 |
-| 🏀 Lady Vols Basketball | UT vs. New Haven | 🟢 W 83-40 - November 10 | 16-14 |
+| 🏀 Lady Vols Basketball | UT vs. Middle Tenn. | 🟢 W 110-64 - November 12 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
 | 🥎 Softball (#4) | UT @ Texas | 🔴 L 0-4 - WCWS National Semifinal | 49-12 |
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `52`
+**⏱️ Days since my last public contribution:** `53`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The QWERTY layout was designed in the 1870s to slow typists and prevent jams.
+**🧠 Fact of the day:** A 'jiffy' is a real unit of time - often ~10 ms - used in some OS kernels.
 
 <!-- PROFILE:END -->
 
