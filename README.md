@@ -31,18 +31,18 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football (#9) | UT @ Texas A&M | 🟢 W 22-7 - November 14 | 7-2 |
-| 🏀 Men's Basketball (#11) | UT vs. Tennessee St. | 🟢 W 83-78 - November 13 | 1-0 |
+| 🏈 Football (#9) | UT @ Texas A&M | 🟢 W 22-7 - November 14 | 8-2 |
+| 🏀 Men's Basketball (#14) | UT vs. Tennessee St. | 🟢 W 83-78 - November 13 | 3-0 |
 | 🏀 Lady Vols Basketball | UT vs. Middle Tenn. | 🟢 W 110-64 - November 12 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
 | 🥎 Softball (#4) | UT @ Texas | 🔴 L 0-4 - WCWS National Semifinal | 49-12 |
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `56`
+**⏱️ Days since my last public contribution:** `57`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The Apollo 11 guidance computer had ~4 KB of RAM - less than a single emoji today.
+**🧠 Fact of the day:** 'Foobar' likely derives from the WWII-era military slang 'FUBAR'.
 
 <!-- PROFILE:END -->
 
