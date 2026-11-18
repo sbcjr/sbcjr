@@ -32,17 +32,17 @@
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
 | 🏈 Football (#9) | UT @ Texas A&M | 🟢 W 22-7 - November 14 | 8-2 |
-| 🏀 Men's Basketball (#14) | UT vs. Tennessee St. | 🟢 W 83-78 - November 13 | 3-0 |
-| 🏀 Lady Vols Basketball | UT vs. Middle Tenn. | 🟢 W 110-64 - November 12 | 16-14 |
+| 🏀 Men's Basketball (#14) | UT vs. Michigan St. | 🟢 W 61-46 - November 17 | 3-0 |
+| 🏀 Lady Vols Basketball | UT @ Belmont | 🟢 W 87-65 - November 17 | 16-14 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
 | 🥎 Softball (#4) | UT @ Texas | 🔴 L 0-4 - WCWS National Semifinal | 49-12 |
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `57`
+**⏱️ Days since my last public contribution:** `58`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** 'Foobar' likely derives from the WWII-era military slang 'FUBAR'.
+**🧠 Fact of the day:** The first version of Unix (1969) fit on a machine with 24 KB of memory.
 
 <!-- PROFILE:END -->
 
