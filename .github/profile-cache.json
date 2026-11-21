@@ -8,25 +8,25 @@
       "game_id": "6604031",
       "slot_watermark": "2026-11-17",
       "record": "8-2",
-      "fetched": "2026-11-20"
+      "fetched": "2026-11-21"
     },
     "mbb": {
-      "matchup": "UT vs. Michigan St.",
-      "result": "🟢 W 61-46",
-      "stakes": "November 17",
-      "game_id": "6653102",
-      "slot_watermark": "2026-11-20",
+      "matchup": "UT vs. Coastal Carolina",
+      "result": "🟢 W 78-51",
+      "stakes": "November 20",
+      "game_id": "6653104",
+      "slot_watermark": "2026-11-21",
       "record": "3-0",
-      "fetched": "2026-11-20"
+      "fetched": "2026-11-21"
     },
     "wbb": {
       "matchup": "UT vs. Radford",
       "result": "🟢 W 102-48",
       "stakes": "November 19",
       "game_id": "6649535",
-      "slot_watermark": "2026-11-20",
+      "slot_watermark": "2026-11-21",
       "record": "6-0",
-      "fetched": "2026-11-20"
+      "fetched": "2026-11-21"
     },
     "baseball": {
       "matchup": "UT @ VCU",

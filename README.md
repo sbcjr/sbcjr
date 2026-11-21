@@ -32,17 +32,17 @@
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
 | 🏈 Football (#9) | UT @ Texas A&M | 🟢 W 22-7 - November 14 | 8-2 |
-| 🏀 Men's Basketball (#14) | UT vs. Michigan St. | 🟢 W 61-46 - November 17 | 3-0 |
+| 🏀 Men's Basketball (#14) | UT vs. Coastal Carolina | 🟢 W 78-51 - November 20 | 3-0 |
 | 🏀 Lady Vols Basketball | UT vs. Radford | 🟢 W 102-48 - November 19 | 6-0 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
 | 🥎 Softball (#4) | UT @ Texas | 🔴 L 0-4 - WCWS National Semifinal | 49-12 |
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `60`
+**⏱️ Days since my last public contribution:** `61`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** Ada Lovelace wrote the first algorithm intended for a machine in the 1840s.
+**🧠 Fact of the day:** The 'save' icon is a floppy disk most developers under 30 have never held.
 
 <!-- PROFILE:END -->
 
