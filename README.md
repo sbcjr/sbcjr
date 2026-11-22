@@ -31,7 +31,7 @@
 
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
-| 🏈 Football (#9) | UT @ Texas A&M | 🟢 W 22-7 - November 14 | 8-2 |
+| 🏈 Football (#9) | UT vs. LSU | 🟢 W 27-13 - November 21 | 8-2 |
 | 🏀 Men's Basketball (#14) | UT vs. Coastal Carolina | 🟢 W 78-51 - November 20 | 3-0 |
 | 🏀 Lady Vols Basketball | UT vs. Radford | 🟢 W 102-48 - November 19 | 6-0 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
@@ -39,10 +39,10 @@
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `61`
+**⏱️ Days since my last public contribution:** `62`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The 'save' icon is a floppy disk most developers under 30 have never held.
+**🧠 Fact of the day:** cURL, released in 1998, now ships in billions of devices including cars and TVs.
 
 <!-- PROFILE:END -->
 
