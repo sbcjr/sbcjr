@@ -6,27 +6,27 @@
       "result": "🟢 W 27-13",
       "stakes": "November 21",
       "game_id": "6603822",
-      "slot_watermark": "2026-11-17",
+      "slot_watermark": "2026-11-24",
       "record": "9-2",
-      "fetched": "2026-11-23"
+      "fetched": "2026-11-24"
     },
     "mbb": {
       "matchup": "UT vs. Coastal Carolina",
       "result": "🟢 W 78-51",
       "stakes": "November 20",
       "game_id": "6653104",
-      "slot_watermark": "2026-11-23",
-      "record": "3-0",
-      "fetched": "2026-11-23"
+      "slot_watermark": "2026-11-24",
+      "record": "5-0",
+      "fetched": "2026-11-24"
     },
     "wbb": {
       "matchup": "UT vs. UCLA",
       "result": "🔴 L 80-90",
       "stakes": "November 22",
       "game_id": "6649537",
-      "slot_watermark": "2026-11-23",
+      "slot_watermark": "2026-11-24",
       "record": "6-1",
-      "fetched": "2026-11-23"
+      "fetched": "2026-11-24"
     },
     "baseball": {
       "matchup": "UT @ VCU",
@@ -50,12 +50,12 @@
     }
   },
   "ranks": {
-    "mbb": "14",
+    "mbb": "9",
     "softball": "4",
     "football": "7"
   },
   "poll_records": {
-    "mbb": "3-0",
+    "mbb": "5-0",
     "softball": "49-12",
     "football": "9-2"
   }
