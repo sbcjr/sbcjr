@@ -32,17 +32,17 @@
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
 | 🏈 Football (#7) | UT vs. LSU | 🟢 W 27-13 - November 21 | 9-2 |
-| 🏀 Men's Basketball (#9) | UT vs. Coastal Carolina | 🟢 W 78-51 - November 20 | 5-0 |
+| 🏀 Men's Basketball (#9) | UT @ Maryland | 🟢 W 72-64 - November 24 | 5-0 |
 | 🏀 Lady Vols Basketball | UT vs. UCLA | 🔴 L 80-90 - November 22 | 6-1 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
 | 🥎 Softball (#4) | UT @ Texas | 🔴 L 0-4 - WCWS National Semifinal | 49-12 |
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `64`
+**⏱️ Days since my last public contribution:** `65`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The Linux penguin is named Tux; Torvalds picked a penguin after being bitten by one.
+**🧠 Fact of the day:** The first domain ever registered was symbolics.com, in March 1985.
 
 <!-- PROFILE:END -->
 
