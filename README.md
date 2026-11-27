@@ -32,17 +32,17 @@
 | Sport/Rank | Latest matchup | Result | Season |
 |---|---|---|:--:|
 | 🏈 Football (#7) | UT vs. LSU | 🟢 W 27-13 - November 21 | 9-2 |
-| 🏀 Men's Basketball (#9) | UT @ Maryland | 🟢 W 72-64 - November 24 | 5-0 |
+| 🏀 Men's Basketball (#9) | UT @ Iowa St. | 🟢 W 75-64 - November 26 | 5-0 |
 | 🏀 Lady Vols Basketball | UT vs. UCLA | 🔴 L 80-90 - November 22 | 6-1 |
 | ⚾ Baseball | UT @ VCU | 🔴 L 4-5 - May 30 | 38-22 |
 | 🥎 Softball (#4) | UT @ Texas | 🔴 L 0-4 - WCWS National Semifinal | 49-12 |
 
 `WW91IGZvdW5kIGl0LCB5YXkuLi4uIPCfpZo=`
 
-**⏱️ Days since my last public contribution:** `66`
+**⏱️ Days since my last public contribution:** `67`
 > …but don't be fooled - legit contributions all ship to 🔒 **SECRET** private repos.
 
-**🧠 Fact of the day:** The first computer "bug" was a literal moth, taped into Grace Hopper's 1947 logbook.
+**🧠 Fact of the day:** The term 'debugging' predates computers - engineers 'debugged' hardware for decades prior.
 
 <!-- PROFILE:END -->
 
