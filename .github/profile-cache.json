@@ -8,25 +8,25 @@
       "game_id": "6603822",
       "slot_watermark": "2026-11-24",
       "record": "9-2",
-      "fetched": "2026-11-27"
+      "fetched": "2026-11-28"
     },
     "mbb": {
-      "matchup": "UT @ Iowa St.",
-      "result": "🟢 W 75-64",
-      "stakes": "November 26",
-      "game_id": "6664124",
-      "slot_watermark": "2026-11-27",
+      "matchup": "UT @ Louisville",
+      "result": "🔴 L 64-84",
+      "stakes": "November 27",
+      "game_id": "6664119",
+      "slot_watermark": "2026-11-28",
       "record": "5-0",
-      "fetched": "2026-11-27"
+      "fetched": "2026-11-28"
     },
     "wbb": {
-      "matchup": "UT vs. UCLA",
-      "result": "🔴 L 80-90",
-      "stakes": "November 22",
-      "game_id": "6649537",
-      "slot_watermark": "2026-11-27",
-      "record": "6-1",
-      "fetched": "2026-11-27"
+      "matchup": "UT @ FGCU",
+      "result": "🟢 W 88-80",
+      "stakes": "November 27",
+      "game_id": "6647044",
+      "slot_watermark": "2026-11-28",
+      "record": "7-1",
+      "fetched": "2026-11-28"
     },
     "baseball": {
       "matchup": "UT @ VCU",
